@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>Bienvenido a la aplicacion de asignaturas, RETO4.</h1>
-    <h2>Hecho por Felipe Soto Correa.</h2>
+    <h2>Hecho por Felipe Soto Correa y Natalia Ospina.</h2>
   </div>
 </template>
 

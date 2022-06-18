@@ -11,19 +11,19 @@ export default {
   <div class="row">
         <div class="col-12 mb-2">
             <!-- llamamos al componente para Crear   -->
-            <router-link :to='{name:"add-subject"}' class="btn btn-success"><i class="fas fa-plus-circle">Agregar</i></router-link>
+            <router-link :to='{name:"add-subject"}' class="btn btn-success">Agregar <font-awesome-icon icon="fa-solid fa-plus" ></font-awesome-icon></router-link>
         </div>
         <div class="col-12">
           <div class="table-responsive">
               <table class="table table-bordered">
-                  <thead class="bg-primary text-white">
+                  <thead class="thead-dark text-white">
                       <tr>
                           <th>Nombre</th>
                           <th>Creditos</th>
                           <th>Profesor</th>
                       </tr>
                   </thead>
-                  <tbody>
+                  <tbody class="table-striped">
                       <tr v-for="subject in subjects" :key="subject.id">
                           <td>{{ subject.name }}</td>
                           <td>{{ subject.credits }}</td>
@@ -33,8 +33,8 @@ export default {
                                 Detalles
                               </button>
                               <!-- llamamos al componente para Editar     -->
-                              <router-link :to='{name:"edit-subject",params:{id:subject.id}}' class="btn btn-info"><i class="fas fa-edit"></i>Editar</router-link>
-                              <a type="button" @click="deleteSubject(subject.id)" class="btn btn-danger"><i class="fas fa-trash"></i>Eliminar</a>
+                              <router-link :to='{name:"edit-subject",params:{id:subject.id}}' class="btn btn-info"><font-awesome-icon icon="fa-solid fa-pencil" ></font-awesome-icon></router-link>
+                              <a type="button" @click="deleteSubject(subject.id)" class="btn btn-danger"><font-awesome-icon icon="fa-solid fa-trash-can" ></font-awesome-icon></a>
                           </td>
                       </tr>
                   </tbody>
@@ -43,13 +43,13 @@ export default {
         </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade bg-light" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
-              <div class="modal-header">
+              <div class="modal-header text-light bg-dark">
                 <h5 class="modal-title" id="exampleModalLabel" >{{currentSubject.name}}</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
+                <button type="buttons" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" style="color: white">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
@@ -64,7 +64,7 @@ export default {
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>

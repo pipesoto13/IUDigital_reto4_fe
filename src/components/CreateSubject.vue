@@ -1,8 +1,8 @@
 <template>
       <div class="row">
         <div class="col-12">
-            <div class="card">
-                <div class="card-header"><h4>Crear Asignatura</h4></div>
+            <div class="card border-dark">
+                <div class="card-header text-light bg-dark"><h4>Crear Asignatura</h4></div>
                 <div class="card-body">
                     <form @submit.prevent="add">
                         <div class="row">
@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Guardar</button>
+                                <button type="submit" class="btn btn-dark">Guardar</button>
                             </div>
                         </div>
                     </form>
